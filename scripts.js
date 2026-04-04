@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Scripts MS Eventos Ativos");
 
-    // Máscara Automática para Telefone de Angola
+    
     const telInput = document.querySelector('input[name="telefone"]');
     if (telInput) {
         telInput.addEventListener('input', function(e) {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.target.value = '+244 ';
             }
 
-            // Formata: +244 9XX XXX XXX
+            
             if (value.length > 3) {
                 let formatted = '+244 ' + value.substring(3, 6);
                 if (value.length > 6) formatted += ' ' + value.substring(6, 9);
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Validação de Data (Respeitando seu Trigger MySQL)
+    
     const dateInput = document.querySelector('input[name="datanasc"]');
     if (dateInput) {
         dateInput.addEventListener('change', function() {
